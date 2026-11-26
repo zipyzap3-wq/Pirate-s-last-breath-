@@ -23,12 +23,7 @@ Never put the key in a source file, issue, commit, or chat message.
 
 ## How to request a Gemini review
 
-There are two supported routes:
-
-1. Create a GitHub issue describing the task and add the label `ai-collab`. The workflow posts Gemini's response as an issue comment.
-2. On an existing issue, add a comment beginning with `/gemini `, followed by the question or review request. The workflow posts a response beneath it.
-
-ChatGPT can create and update these task issues through the connected GitHub integration, then read Gemini's response and decide what to adopt.
+Create a GitHub issue describing the task, then add a comment beginning with `/gemini ` followed by the question or review request. The workflow posts Gemini's response beneath it. ChatGPT can create the issue and send the `/gemini` comment through the connected GitHub integration, then read Gemini's response and decide what to adopt.
 
 ## Safety and project boundaries
 
