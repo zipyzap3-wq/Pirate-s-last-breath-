@@ -15,7 +15,7 @@ Behavior Pack header UUID `7abcb8fa-d0b1-4167-ac8c-bf421e3b9efc`; module UUID `5
 
 Resource Pack header UUID `b34b6e61-3ecb-4336-92b2-4c1acdc72557`; module UUID `edbf7ead-9a19-46f5-b6cc-2f554db0f9df`; version `76.0.0`; minimum engine `1.21.60`.
 
-The code header mentions a 1.21.100-era build. A separate prototype package declares engine 1.26.70 and server API 2.11.0; it is not the main source pack and must not be merged without review.
+The code header mentions a 1.21.100-era build. The intended compatibility test target from the earlier project discussion is Bedrock beta 26.70 (engine 1.26.70). The main pack remains at its original 1.21.60 minimum and server API 2.8.0 until compatibility is checked and tested. A separate prototype package declares engine 1.26.70 and server API 2.11.0; it is not the main source pack and must not be merged without review.
 
 ## Architecture map
 | System | Important source path |
