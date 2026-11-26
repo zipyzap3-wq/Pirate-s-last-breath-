@@ -1,8 +1,6 @@
 name: Frontier AI collaborator
 
 on:
-  issues:
-    types: [labeled]
   issue_comment:
     types: [created]
 
@@ -16,15 +14,7 @@ concurrency:
 
 jobs:
   gemini-review:
-    if: >-
-      (github.event_name == 'issues' &&
-       github.event.action == 'labeled' &&
-       github.event.label.name == 'ai-collab') ||
-      (github.event_name == 'issue_comment' &&
-       github.event.action == 'created' &&
-       startsWith(github.event.comment.body, '/gemini ') &&
-       contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.comment.author_association))
-    runs-on: ubuntu-latest
+    if: >-\n      github.event_name == 'issue_comment' &&\n      github.event.action == 'created' &&\n      startsWith(github.event.comment.body, '/gemini ') &&\n      contains(fromJSON('[\"OWNER\",\"MEMBER\",\"COLLABORATOR\"]'), github.event.comment.author_association)\n    runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
       - name: Ask Gemini and post its review
