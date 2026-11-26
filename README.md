@@ -7,7 +7,9 @@ Expand the existing add-on into a One Piece-inspired open-world action RPG. Blox
 
 ## Project documents
 - `docs/PROJECT_BASELINE.md` — inspected pack structure, versions and source map.
-- `docs/GAMEPLAY_SYSTEM_SPEC.md` — requested gameplay systems and radial selector.
+- `docs/GAMEPLAY_SYSTEM_SPEC.md` — requested gameplay systems.
+- `docs/RADIAL_SELECTOR_DESIGN.md` — radial menu mapping and UI constraints.
+- `docs/WORLD_PROGRESSION_BLUEPRINT.md` — sea/island progression route.
 - `docs/IMPLEMENTATION_ROADMAP.md` — staged implementation and acceptance gates.
 - `docs/AI_STUDIO_HANDOFF.md` — instructions for later Google AI Studio work.
 - `docs/TOOLS.md` — useful non-AI Bedrock development tools.
