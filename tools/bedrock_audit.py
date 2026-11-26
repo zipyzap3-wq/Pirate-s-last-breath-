@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Static Bedrock pack audit; Python standard library only."""
-import argparse,json,os,re,sys
+import argparse,json,re,sys
 from pathlib import Path
 
 def strip_jsonc(s):
@@ -42,9 +42,10 @@ def strip_jsonc(s):
 
 def parse(p): return json.loads(strip_jsonc(p.read_text(encoding="utf-8-sig")))
 def imports(pack):
-    rx=re.compile(r'(?:\\bfrom\\s*|\\bimport\\s*)[\'"]([^\'"]+)[\'"]')
+    rx=re.compile(r'(?:\bfrom\s*|\bimport\s*)[\'"]([^\'"]+)[\'"]')
     count=0; missing=[]
-    for p in (pack/"scripts").rglob("*") if (pack/"scripts").exists() else []:
+    scripts=pack/"scripts"
+    for p in scripts.rglob("*") if scripts.exists() else []:
         if p.suffix not in (".js",".mjs",".ts"): continue
         count+=1
         for spec in rx.findall(p.read_text(encoding="utf-8",errors="replace")):
